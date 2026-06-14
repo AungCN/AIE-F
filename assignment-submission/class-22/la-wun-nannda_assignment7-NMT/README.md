@@ -54,9 +54,12 @@ Results:
 ├── models/
 ├── summary/
 │
+├── docker/                 # for interactive testing
+├── web/                    # for interactive testing
+│
 ├── data/
-│   ├── g2p-par/                    # originally Sayar's
-│   ├── cleaned/                    # preprocessed data (version 1)
+│   ├── g2p-par/            # originally Sayar's
+│   ├── cleaned/            # preprocessed data (version 1)
 │   ├── vocab/
 │   └── logs/
 │
@@ -64,6 +67,31 @@ Results:
 ├── seq2seq.myph.sh         # originally Sayar's # modified paths
 └── transformer.myph.sh     # originally Sayar's # modified paths
 ```
+
+## Environment Setup
+The `.env` file includes the following:
+```env
+HF_MODEL_REPO=username/repository
+HF_TOKEN =huggingface-read-access-key
+```
+
+## Testing
+
+- Models: [Hugging Face Model](https://huggingface.co/lawun330/basic-neural-machine-translation)
+- Local Demo:
+  ```console
+  # 1. clone the repo, install dependencies, set environment variables
+  # 2. run bash to host flask web app locally
+  ./web/run.sh
+  ```
+  or
+  ```console
+  # 1. clone the repo, set environment variables
+  # 2. use docker
+  docker build -f docker/Dockerfile -t basic-nmt .
+  docker run -p 7860:7860 --env-file .env basic-nmt
+  ```
+- Cloud Demo: [Hugging Face Space](https://huggingface.co/spaces/lawun330/basic-neural-machine-translation)
 
 ## References
 
