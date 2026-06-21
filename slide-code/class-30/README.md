@@ -9,7 +9,7 @@
 
 - [Evolution of Reinforcement Learning: From Dynamic Programming to RLHF and Reasoning Models](https://github.com/ye-kyaw-thu/AIE-F/blob/main/slide-code/class-30/rl.pdf)  
 
-## Some Demo Codes
+## Calculation Demo Codes
 
 1. [Maze Suite](https://github.com/ye-kyaw-thu/AIE-F/blob/main/slide-code/class-30/demo-code/maze_suite.py)  
 2. [Dynamic Programming](https://github.com/ye-kyaw-thu/AIE-F/blob/main/slide-code/class-30/demo-code/dp.py)  
